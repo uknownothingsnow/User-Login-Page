@@ -1,0 +1,27 @@
+Intro
+--------
+I wrote this Page based on the scaffold generator program with Users controller and attributes name:string and email:string.
+I also generated a Sessions controller with 'new' action.
+I modified the 'email' attribute in Users to password_field 'password'.
+I modified the 'email' attribute in Sessions to text_field 'name'.
+I added a resource in route to implement the standard RESTful actions for Sessions.
+After these, I also did some modifications like linking the sign in and sign up pages to the index page, modifying contents on each page and so on.
+
+How to use
+-------------
+After clone the source code and setup database (I use sqlite3 database by default), you can run the server by
+"rake s"
+Then you can access "localhost:3000" in your browser to open the web page.
+The page is the original generated main page with extra 'sign in' and 'sign up' functions.
+In 'sign up' page you can create an account with user name and password. After create an account, you can edit, delete your account or check the other users in users list.
+
+In 'sign in' page you can jump to 'sign up' page or log-in your account with your user name and password.
+
+To do
+--------
+Since I was using pure html page with javascript authentication checking before, I haven't move the checking part into rails yet. So after input your name and password on the 'sign in' page, you should see a error page warning you the website lacks of authentication checking. This part should be done with writing some tests in a specification file and adding some helpers.
+
+Reference
+------------
+Some of my code is modified from the "Ruby on Rails Tutorial" which is written by Michael Hart.
+http://ruby.railstutorial.org/chapters/beginning#top
